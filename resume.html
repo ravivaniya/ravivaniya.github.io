@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume - Ravi Vaniya</title>
+  <link rel="icon" type="image/gif/png" href="BVM.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    h2 {
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+    #frame {
+      max-width: 1000px;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>
+    <i class="fa fa-angle-double-left" style="cursor: pointer;" onclick="back()"></i> &nbsp;&nbsp;
+    <a id="top">Wanna hire me! 😲</a>
+  </h2>
+  <hr>
+  <embed id="frame" src="resume.pdf" width="1250px" height="1000px" type='application/pdf'>
+  
+  <hr>
+  <h2>
+    <i class="fa fa-angle-double-up" style="cursor: pointer;" onclick="up()"></i>
+  </h2>
+  <script type="text/javascript">
+    function back() {
+      location.href = "index.html";
+    }
+    function up() {
+      location.href = "#top";
+    }
+  </script>
+</body>
+</html>

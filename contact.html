@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact - Ravi Vaniya</title>
+	<link rel="icon" type="image/gif/png" href="BVM.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    h2 {
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+    #infotbl {
+      padding: 10px;
+      margin-left: 20%;
+      margin-right: 20%;
+      font-family: 'Sunflower', sans-serif;
+      font-size: 18px;
+    }
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      font-family: 'Roboto', sans-serif;
+    }
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+    .fa:hover {
+      opacity: 0.7;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+      margin-left: 38%;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-quora {
+      background: red;
+      color: white;
+    }
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+      margin-right: 38%;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>
+    <i class="fa fa-angle-double-left" style="cursor: pointer;" onclick="back()"></i>
+    <a id="top">You can ping me here 💡</a>
+  </h2>
+	<hr>
+  <div>
+    <table id="infotbl">
+      <tr>
+        <td><h1>🏠</h1></td>
+        <td><h3 style="margin-left: 10px;">C-253, BAPS Swaminarayan Chatralay, V.V.Nagar, Aanad (Guj.) 388 120</h3></td>
+      </tr>
+      <tr>
+        <td><h1>📧</h1></td>
+        <td><h3 style="margin-left: 10px;">ravivaniya4911@gmail.com, 150080116045@bvmengineering.ac.in</h3></td>
+      </tr>
+      <tr>
+        <td><h1>📱</h1></td>
+        <td><h3 style="margin-left: 10px;">+91 8511119526, +91 9106912808(Whatsapp)</h3></td>
+      </tr>
+    </table>
+  </div>
+  <h2 style="font-family: 'Indie Flower', cursive; text-align: center; font-weight: bold;">Contact Form</h2>
+  <div class="container">
+    <form action="#">
+      <input type="text" id="fname" name="firstname" placeholder="First Name">
+      <input type="text" id="lname" name="lastname" placeholder="Last Name">
+      <textarea id="subject" name="subject" placeholder="Subject..." style="height:200px;"></textarea>
+      <input type="submit" value="Submit" onclick="alert('Sorry! this is functionality is currently disable')">
+    </form>
+  </div>
+  <h2 style="font-family: 'Indie Flower', cursive; text-align: center; font-weight: bold;">You can find me socially</h2>
+  <div>
+    <a href="https://www.facebook.com/ravi.vaniya.9" target="_blank" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/ravivaniya4911" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://www.quora.com/profile/RAVI-VANIYA" target="_blank" class="fa fa-quora"></a>
+    <a href="https://www.linkedin.com/in/ravi-vaniya/" target="_blank" class="fa fa-linkedin"></a>
+  </div>
+  <h2>
+    <i class="fa fa-angle-double-up" style="cursor: pointer;" onclick="up()"></i>
+  </h2>
+  <script type="text/javascript">
+    function back() {
+      location.href = "index.html";
+    }
+    function up() {
+      location.href = "#top";
+    }
+  </script>
+</body>
+</html>

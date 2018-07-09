@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cool Stuffs 😎</title>
+  <link rel="icon" type="image/gif/png" href="BVM.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <style type="text/css">
+    h2 {
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .container {
+    	max-width: 800px;
+    }
+    h1 {
+    	font-family: 'Rock Salt', cursive;
+    }
+    p {
+    	margin: 25px;
+    }
+    #random_quote {
+    	font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>
+    <i class="fa fa-angle-double-left" style="cursor: pointer;" onclick="back()"></i> &nbsp;&nbsp;
+    <a id="top" style="text-decoration: none; color: black;">🤟 Some of stuffs i really ❤️ are</a>
+  </h2>
+  <hr>
+  <br>
+  <div class='container text-center'>
+  	<h1 style="color: #337ab7;">" Quote of the day "</h1>
+  	<p>These are some random quotes from <a href="https://forismatic.com/" target='_blank'>forismatic.com</a>. I hope you enjoy them!</p>
+  	<button class='btn btn-success'>New Quote</button>
+  	<a class='btn btn-primary' id='tweet' href='#' target='_blank' role='button'><i class="fa fa-twitter"></i> Tweet the Quote</a>
+  	<p id='random_quote'></p>
+  </div>
+  <!-- <p>Hobby</p>
+  <p>Favorite books and videos</p>
+  <p>Satsang</p>
+   --><hr>
+  <h2>
+    <i class="fa fa-angle-double-up" style="cursor: pointer;" onclick="up()"></i>
+  </h2>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script type="text/javascript">
+    function back() {
+      location.href = "index.html";
+    }
+    function up() {
+      location.href = "#top";
+    }
+    function randomQuote() {
+    	$.ajax({
+    		url: "https://api.forismatic.com/api/1.0/?",
+    		dataType: "jsonp",
+    		data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+    		success: function( response ) {
+    			$("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
+          response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+    			$("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
+          ' (' + response.quoteAuthor + ')');
+    		}
+    	});
+    }
+    $(function() {
+    	randomQuote();
+    });
+    $("button").click(function(){
+    	randomQuote();
+    });
+  </script>
+</body>
+</html>
